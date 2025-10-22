@@ -3,51 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Empruher S.A.S.</title>
+  <title>Inicio | Empruher S.A.S.</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="font-sans text-gray-800">
-  <!-- NAVBAR -->
-  <header class="bg-white shadow-md fixed w-full top-0 z-50">
-    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-2xl font-bold text-pink-600">Empruher S.A.S.</h1>
-      <ul class="flex space-x-6">
-        <li><a href="Inicio.html" class="hover:text-pink-600">Inicio</a></li>
-        <li><a href="QuienesSomos.html" class="hover:text-pink-600">Quiénes Somos</a></li>
-        <li><a href="Servicios.html" class="hover:text-pink-600">Servicios</a></li>
-        <li><a href="contacto.html" class="hover:text-pink-600">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="font-sans text-gray-800 bg-pink-50">
 
-  <!-- HERO SECTION -->
-  <section class="pt-28 bg-pink-50 text-center min-h-screen flex flex-col justify-center items-center px-4">
-    <h2 class="text-4xl md:text-5xl font-bold text-pink-700 mb-4">
-      Transformamos talento femenino en oportunidades reales de empleo
-    </h2>
-    <p class="max-w-2xl text-lg mb-8">
-      En <strong>Empruher S.A.S.</strong> impulsamos el crecimiento profesional de mujeres egresadas,
-      conectándolas con empresas que creen en el poder del talento femenino.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4">
-      <a href="egresadas.html" class="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700">
-        Únete como Egresada
-      </a>
-      <a href="empresas.html" class="border border-pink-600 text-pink-600 px-6 py-3 rounded-lg hover:bg-pink-100">
-        Soy una Empresa
-      </a>
-    </div>
-    <div class="mt-12">
-      <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6" 
-           alt="Mujeres profesionales trabajando juntas"
-           class="rounded-2xl shadow-lg w-full max-w-3xl">
+  <!-- NAVBAR -->
+<header class="bg-white shadow-md fixed w-full top-0 z-50">
+  <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+    <!-- LOGO CON ENLACE AL INICIO -->
+    <a href="Inicio.html" class="text-2xl font-bold text-pink-600 hover:text-pink-700 transition">
+      Empruher S.A.S.
+    </a>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <button id="menu-btn" class="text-pink-600 text-3xl md:hidden focus:outline-none">
+      ☰
+    </button>
+
+    <!-- LINKS -->
+    <ul id="menu" class="hidden md:flex space-x-6">
+      <li><a href="Inicio.html" class="hover:text-pink-600">Inicio</a></li>
+      <li><a href="QuienesSomos.html" class="hover:text-pink-600">Quiénes Somos</a></li>
+      <li><a href="Servicios.html" class="hover:text-pink-600">Servicios</a></li>
+      <li><a href="Impacto.html" class="hover:text-pink-600">Impacto</a></li>
+      <li><a href="Noticias.html" class="hover:text-pink-600">Noticias</a></li>
+      <li><a href="Contacto.html" class="hover:text-pink-600">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- MENÚ MOBILE -->
+  <ul id="mobile-menu" class="md:hidden hidden bg-white shadow-md border-t border-gray-200">
+    <li><a href="Inicio.html" class="block px-6 py-3 hover:bg-pink-50 text-gray-700">Inicio</a></li>
+    <li><a href="QuienesSomos.html" class="block px-6 py-3 hover:bg-pink-50 text-gray-700">Quiénes Somos</a></li>
+    <li><a href="Servicios.html" class="block px-6 py-3 hover:bg-pink-50 text-gray-700">Servicios</a></li>
+    <li><a href="Impacto.html" class="block px-6 py-3 hover:bg-pink-50 text-gray-700">Impacto</a></li>
+    <li><a href="Noticias.html" class="block px-6 py-3 hover:bg-pink-50 text-gray-700">Noticias</a></li>
+    <li><a href="Contacto.html" class="block px-6 py-3 hover:bg-pink-50 text-gray-700">Contacto</a></li>
+  </ul>
+</header>
+
+
+  <!-- SCRIPT MENU -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- HERO -->
+  <section class="pt-28 bg-pink-50 text-center px-6 pb-16">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-pink-700 mb-4">
+        Impulsando el talento femenino hacia un futuro laboral con propósito
+      </h2>
+      <p class="max-w-3xl mx-auto text-lg mb-8 text-gray-700">
+        <strong>Empruher S.A.S.</strong> conecta mujeres profesionales con oportunidades reales de crecimiento,
+        promoviendo la equidad, la formación y el liderazgo femenino en el ámbito laboral.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="QuienesSomos.html" class="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">Conócenos</a>
+        <a href="Contacto.html" class="border border-pink-600 text-pink-600 px-6 py-3 rounded-lg hover:bg-pink-100 transition">
+          Contáctanos
+        </a>
+      </div>
     </div>
   </section>
+
+  <!-- SECCIONES DESTACADAS -->
+  <section class="container mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-8 mb-16">
+    <!-- QUIÉNES SOMOS -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=800&q=80" 
+           alt="Equipo de trabajo colaborando" class="w-full h-48 object-cover">
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold text-pink-700 mb-2">Quiénes Somos</h3>
+        <p class="text-gray-600 mb-3">Una comunidad que impulsa la empleabilidad femenina mediante formación, alianzas y mentorías.</p>
+        <a href="QuienesSomos.html" class="text-pink-600 font-semibold hover:underline">Leer más</a>
+      </div>
+    </div>
+
+    <!-- SERVICIOS -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1598257006626-48b0c252070d?auto=format&fit=crop&w=800&q=80" 
+           alt="Mujer dando una presentación" class="w-full h-48 object-cover">
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold text-pink-700 mb-2">Servicios</h3>
+        <p class="text-gray-600 mb-3">Ofrecemos programas de formación, mentoría, bienestar y conexión laboral con empresas aliadas.</p>
+        <a href="Servicios.html" class="text-pink-600 font-semibold hover:underline">Ver servicios</a>
+      </div>
+    </div>
+
+    <!-- IMPACTO -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&q=80" 
+           alt="Mujeres celebrando un logro" class="w-full h-48 object-cover">
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold text-pink-700 mb-2">Impacto</h3>
+        <p class="text-gray-600 mb-3">Más de 300 mujeres conectadas con empleos formales y alianzas con organizaciones internacionales.</p>
+        <a href="Impacto.html" class="text-pink-600 font-semibold hover:underline">Ver impacto</a>
+      </div>
+    </div>
+  </section>
+  <!-- BLOG / NOTICIAS Y COMUNIDAD -->
+  <section class="container mx-auto px-6 md:px-12 mb-16">
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition max-w-3xl mx-auto">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
+           alt="Mujeres colaborando en un espacio creativo" 
+           class="w-full h-48 object-cover">
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold text-pink-700 mb-2">Noticias y Comunidad</h3>
+        <p class="text-gray-600 mb-3">
+          Descubre artículos, entrevistas y consejos sobre empleabilidad, liderazgo y bienestar femenino.
+        </p>
+        <a href="Noticias.html" class="text-pink-600 font-semibold hover:underline">Ir al blog</a>
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- FOOTER -->
   <footer class="bg-pink-700 text-white py-6 text-center">
     <p>&copy; 2025 Empruher S.A.S. | Empoderando mujeres en el mundo laboral</p>
   </footer>
+
 </body>
 </html>
